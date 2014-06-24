@@ -1,0 +1,5 @@
+rubygems-mirror (1.0.0+git~5235fbc-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)
+
+ -- Kouhei Maeda <mkouhei@palmtb.net>  Tue, 24 Jun 2014 17:01:48 +0900

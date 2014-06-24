@@ -1,0 +1,16 @@
+Usage
+-----
+
+Copy /usr/share/doc/rubygems-mirror/mirrorrc.example to $(HOME)/.gems/.mirrorrc,
+Edit .mirrorrc, change 'to:' paramerter ::
+
+  ---
+  - from: http://rubygems.org
+    to:   /var/lib/mirror/gems
+    parallelism: 10
+
+
+Execute next command for mirroring.::
+
+  $ rake -f /usr/share/doc/rubygems-mirror/Rakefile mirror:update
+

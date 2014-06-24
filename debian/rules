@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+export DH_VERBOSE=1
+#export DH_RUBY_IGNORE_TESTS=all
+export DH_RUBY_IGNORE_TESTS=ruby1.8 ruby1.9.1 require-rubygems
+#export DH_RUBY_GEMSPEC=gem.gemspec
+
+%:
+	dh $@ --buildsystem=ruby --with ruby

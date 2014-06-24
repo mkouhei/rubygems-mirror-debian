@@ -1,0 +1,23 @@
+Source: rubygems-mirror
+Section: ruby
+Priority: optional
+Maintainer: Kouhei Maeda <mkouhei@palmtb.net>
+Build-Depends: debhelper (>= 8.0.0), ruby-dev, gem2deb, ruby-minitest
+Standards-Version: 3.9.5
+XS-Ruby-Versions: all
+Homepage: https://github.com/rubygems/rubygems-mirror
+
+Package: rubygems-mirror
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         rubygems | rubygems-integration,
+         ruby-interpreter | ruby,
+         rake,
+         ruby-hoe,
+         ruby-net-http-persistent
+Description: creates local mirrors of all gems from a remote gem source
+ This is an update to the old `gem mirror` command. It uses net/http/persistent
+ and threads to grab the mirror set a little faster than the original.
+ Eventually it will replace `gem mirror` completely. Right now the API is not
+ completely stable (it will change several times before release), however, will
+ maintain stability in master.

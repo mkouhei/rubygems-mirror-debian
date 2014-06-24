@@ -1,0 +1,43 @@
+* change current directory
+* change filename CHANGELOG.rdoc to changelog
+Index: rubygems-mirror/Rakefile
+===================================================================
+--- rubygems-mirror.orig/Rakefile	2012-07-18 11:49:32.098243639 +0900
++++ rubygems-mirror/Rakefile	2012-07-18 19:20:15.027797738 +0900
+@@ -3,6 +3,7 @@
+ require 'hoe'
+ Hoe.plugin :doofus, :git, :gemcutter
+ 
++Dir::chdir("/usr/share/doc/rubygems-mirror")
+ Hoe.spec 'rubygems-mirror' do
+   developer('James Tucker', 'raggi@rubyforge.org')
+ 
+@@ -13,7 +14,7 @@
+   extra_deps     << %w[net-http-persistent >=2.1]
+ 
+   self.extra_rdoc_files = FileList["**/*.rdoc"]
+-  self.history_file     = "CHANGELOG.rdoc"
++  self.history_file     = "changelog"
+   self.readme_file      = "README.rdoc"
+   self.rubyforge_name   = 'rubygems'
+   self.testlib          = :minitest
+Index: rubygems-mirror/CHANGELOG.rdoc
+===================================================================
+--- rubygems-mirror.orig/CHANGELOG.rdoc	2012-07-18 11:49:32.098243639 +0900
++++ /dev/null	1970-01-01 00:00:00.000000000 +0000
+@@ -1,5 +0,0 @@
+-=== 1.0.0 / 2011-10-01
+-
+-* 1 major enhancement
+-
+-  * Birthday!
+Index: rubygems-mirror/changelog
+===================================================================
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ rubygems-mirror/changelog	2012-07-18 11:49:32.098243639 +0900
+@@ -0,0 +1,5 @@
++=== 1.0.0 / 2011-10-01
++
++* 1 major enhancement
++
++  * Birthday!
